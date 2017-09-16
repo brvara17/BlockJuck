@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{801FB084-6374-4F56-A62F-744A196454A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blockjuck361</RootNamespace>
+    <AssemblyName>Blockjuck361</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Card.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="MenuButton.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Players.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rank.cs" />
+    <Compile Include="Suit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="..\Blockjuck361Content\bin\graphics\Back.xnb">
+      <Link>Content\graphics\Back.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\graphics\hitbutton.xnb">
+      <Link>Content\graphics\hitbutton.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\graphics\quitbutton.xnb">
+      <Link>Content\graphics\quitbutton.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\graphics\standbutton.xnb">
+      <Link>Content\graphics\standbutton.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Ace.xnb">
+      <Link>Content\graphics\clubs\Ace.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Eight.xnb">
+      <Link>Content\graphics\clubs\Eight.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Five.xnb">
+      <Link>Content\graphics\clubs\Five.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Four.xnb">
+      <Link>Content\graphics\clubs\Four.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Jack.xnb">
+      <Link>Content\graphics\clubs\Jack.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\King.xnb">
+      <Link>Content\graphics\clubs\King.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Nine.xnb">
+      <Link>Content\graphics\clubs\Nine.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Queen.xnb">
+      <Link>Content\graphics\clubs\Queen.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Seven.xnb">
+      <Link>Content\graphics\clubs\Seven.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Six.xnb">
+      <Link>Content\graphics\clubs\Six.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Ten.xnb">
+      <Link>Content\graphics\clubs\Ten.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Three.xnb">
+      <Link>Content\graphics\clubs\Three.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\clubs\Two.xnb">
+      <Link>Content\graphics\clubs\Two.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Ace.xnb">
+      <Link>Content\graphics\diamonds\Ace.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Eight.xnb">
+      <Link>Content\graphics\diamonds\Eight.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Five.xnb">
+      <Link>Content\graphics\diamonds\Five.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Four.xnb">
+      <Link>Content\graphics\diamonds\Four.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Jack.xnb">
+      <Link>Content\graphics\diamonds\Jack.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\King.xnb">
+      <Link>Content\graphics\diamonds\King.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Nine.xnb">
+      <Link>Content\graphics\diamonds\Nine.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Queen.xnb">
+      <Link>Content\graphics\diamonds\Queen.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Seven.xnb">
+      <Link>Content\graphics\diamonds\Seven.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Six.xnb">
+      <Link>Content\graphics\diamonds\Six.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Ten.xnb">
+      <Link>Content\graphics\diamonds\Ten.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Three.xnb">
+      <Link>Content\graphics\diamonds\Three.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\diamonds\Two.xnb">
+      <Link>Content\graphics\diamonds\Two.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Ace.xnb">
+      <Link>Content\graphics\hearts\Ace.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Eight.xnb">
+      <Link>Content\graphics\hearts\Eight.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Five.xnb">
+      <Link>Content\graphics\hearts\Five.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Four.xnb">
+      <Link>Content\graphics\hearts\Four.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Jack.xnb">
+      <Link>Content\graphics\hearts\Jack.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\King.xnb">
+      <Link>Content\graphics\hearts\King.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Nine.xnb">
+      <Link>Content\graphics\hearts\Nine.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Queen.xnb">
+      <Link>Content\graphics\hearts\Queen.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Seven.xnb">
+      <Link>Content\graphics\hearts\Seven.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Six.xnb">
+      <Link>Content\graphics\hearts\Six.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Ten.xnb">
+      <Link>Content\graphics\hearts\Ten.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Three.xnb">
+      <Link>Content\graphics\hearts\Three.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\hearts\Two.xnb">
+      <Link>Content\graphics\hearts\Two.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Ace.xnb">
+      <Link>Content\graphics\spades\Ace.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Eight.xnb">
+      <Link>Content\graphics\spades\Eight.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Five.xnb">
+      <Link>Content\graphics\spades\Five.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Four.xnb">
+      <Link>Content\graphics\spades\Four.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Jack.xnb">
+      <Link>Content\graphics\spades\Jack.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\King.xnb">
+      <Link>Content\graphics\spades\King.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Nine.xnb">
+      <Link>Content\graphics\spades\Nine.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Queen.xnb">
+      <Link>Content\graphics\spades\Queen.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Seven.xnb">
+      <Link>Content\graphics\spades\Seven.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Six.xnb">
+      <Link>Content\graphics\spades\Six.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Ten.xnb">
+      <Link>Content\graphics\spades\Ten.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Three.xnb">
+      <Link>Content\graphics\spades\Three.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blockjuck361Content\bin\suits\spades\Two.xnb">
+      <Link>Content\graphics\spades\Two.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Blockjuck361Content\bin\fonts\Arial24.xnb">
+      <Link>Content\fonts\Arial24.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
